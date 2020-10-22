@@ -28,7 +28,7 @@ function App() {
   useEffect(() => {
      const consultarApi = async () => {
         if(consultar){
-          var url = `http://api.openweathermap.org/data/2.5/forecast?q=${ciudad}&cnt=6&appid=${appID}`;
+          var url = `https://api.openweathermap.org/data/2.5/forecast?q=${ciudad}&cnt=6&appid=${appID}`;
         
           const response = await fetch(url);
           const result = await response.json();
@@ -43,7 +43,7 @@ function App() {
              })
            });
 
-           url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=6&appid=${appID}`;
+           url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=6&appid=${appID}`;
 
            const response = await fetch(url);
            const result = await response.json();
